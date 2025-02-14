@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://nicocha30.github.io/</loc>
+         <loc>https://docs.ligolo.ng/</loc>
          <lastmod>2025-02-14</lastmod>
     </url>
     <url>
-         <loc>https://nicocha30.github.io/Bind/</loc>
+         <loc>https://docs.ligolo.ng/Bind/</loc>
          <lastmod>2025-02-14</lastmod>
     </url>
     <url>
-         <loc>https://nicocha30.github.io/Config-File/</loc>
+         <loc>https://docs.ligolo.ng/Config-File/</loc>
          <lastmod>2025-02-14</lastmod>
     </url>
     <url>
-         <loc>https://nicocha30.github.io/Configuring-a-reverse-proxy/</loc>
+         <loc>https://docs.ligolo.ng/Configuring-a-reverse-proxy/</loc>
          <lastmod>2025-02-14</lastmod>
     </url>
     <url>
-         <loc>https://nicocha30.github.io/InstallBuild/</loc>
+         <loc>https://docs.ligolo.ng/InstallBuild/</loc>
          <lastmod>2025-02-14</lastmod>
     </url>
     <url>
-         <loc>https://nicocha30.github.io/Listeners/</loc>
+         <loc>https://docs.ligolo.ng/Listeners/</loc>
          <lastmod>2025-02-14</lastmod>
     </url>
     <url>
-         <loc>https://nicocha30.github.io/Localhost/</loc>
+         <loc>https://docs.ligolo.ng/Localhost/</loc>
          <lastmod>2025-02-14</lastmod>
     </url>
     <url>
-         <loc>https://nicocha30.github.io/Quickstart/</loc>
+         <loc>https://docs.ligolo.ng/Quickstart/</loc>
          <lastmod>2025-02-14</lastmod>
     </url>
 </urlset>
