@@ -1,0 +1,23 @@
+site_name: Ligolo-ng Documentation
+site_url: https://nicocha30.github.io
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: black
+  logo: assets/ligolo.svg
+nav:
+  - Introduction: index.md
+  - Installing and Building: InstallBuild.md
+  - Quickstart: Quickstart.md
+  - Configuration File: Config-File.md
+  - Listeners : Listeners.md
+  - Agent as server (Bind Connection) : Bind.md
+  - Access to agent's local ports (127.0.0.1): Localhost.md
+  - Running behind a reverse proxy: Configuring-a-reverse-proxy.md
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
