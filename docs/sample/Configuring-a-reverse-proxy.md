@@ -5,7 +5,7 @@ authors:
 
 !!! note "Thanks to @Defte_"
 
-    This documentation was written by @Defte_, many thanks to him!
+    This documentation was written by [@Defte_](https://x.com/defte_), many thanks to him!
     Using a reverse proxy will surely help you reduce your footprint and avoid being detected!
 
 If you ever need to hide the listener behind a reverse proxy (in our case Nginx), here is the Nginx configuration you will have to add:
