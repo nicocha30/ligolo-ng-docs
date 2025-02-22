@@ -6,7 +6,7 @@ authors:
 !!! note "Thanks to @Defte_"
 
     This documentation was written by @Defte_, many thanks to him!
-    Using a reverse proxy will surely help you reduce your footprint, and avoid being detected!
+    Using a reverse proxy will surely help you reduce your footprint and avoid being detected!
 
 If you ever need to hide the listener behind a reverse proxy (in our case Nginx), here is the Nginx configuration you will have to add:
 
@@ -30,7 +30,7 @@ server {
 }	
 ```
 
-That use cas relies on let's encrypt to retrieve certificates so you will have to change the certificate and key suiting your needs. Once done, you can launch the ligolo proxy that way:
+That use case relies on let's encrypt to retrieve certificates so you will have to change the certificate and key suiting your needs. Once done, you can launch the ligolo proxy that way:
 
 ```
 proxy -laddr https://LOCAL_IP:PORT -certfile /etc/letsencrypt/live/DNS_NAME/fullchain.pem -keyfile /etc/letsencrypt/live/DNS_NAME/privkey.pem

@@ -1,20 +1,30 @@
 site_name: Ligolo-ng Documentation
 site_url: https://docs.ligolo.ng
 theme:
+  features:
+    - navigation.tabs
   name: material
   palette:
     scheme: slate
     primary: black
   logo: assets/ligolo.svg
 nav:
-  - Introduction: index.md
-  - Installing and Building: InstallBuild.md
-  - Quickstart: Quickstart.md
-  - Configuration File: Config-File.md
-  - Listeners : Listeners.md
-  - Agent as server (Bind Connection) : Bind.md
-  - Access to agent's local ports (127.0.0.1): Localhost.md
-  - Running behind a reverse proxy: Configuring-a-reverse-proxy.md
+  - Introduction:
+      - index.md
+  - Getting Started:
+      - Installing and Building: InstallBuild.md
+      - Quickstart: Quickstart.md
+      - Configuration File: Config-File.md
+      - Listeners : Listeners.md
+      - Agent as server (Bind Connection) : Bind.md
+      - Access to agent's local ports (127.0.0.1): Localhost.md
+  - Sample and Advanced Usage:
+      - Basic Tunneling: sample/basic.md
+      - Advanced Pivoting: sample/double.md
+      - Running behind a reverse proxy: sample/Configuring-a-reverse-proxy.md
+      - (WIP) Creating a Ligolo-ng router: sample/router.md
+      - (WIP) Ligolo-baremetal: sample/baremetal.md
+
 markdown_extensions:
   - admonition
   - pymdownx.details

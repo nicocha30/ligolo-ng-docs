@@ -11,7 +11,9 @@ $ sudo ip tuntap add user [your_username] mode tun ligolo
 $ sudo ip link set ligolo up
 ```
 
-> On **Ligolo-ng >= v0.6**, you can now use the `interface_create` command to create a new interface! No need to use ip tuntap!
+!!! tip
+    
+    On **Ligolo-ng >= v0.6**, you can now use the `interface_create` command to create a new interface! No need to use ip tuntap!
 
 ```
 ligolo-ng » interface_create --name "evil-cha"
@@ -70,6 +72,8 @@ To ignore all security mechanisms, the `-ignore-cert` option can be used with th
     Beware of man-in-the-middle attacks! This option should only be used in a test environment or for debugging purposes.
 
 ## Using Ligolo-ng
+
+![Basic Tunnel](/assets/graphs/BasicTunnel.svg)
 
 ### Start the Ligolo-ng proxy server
 
