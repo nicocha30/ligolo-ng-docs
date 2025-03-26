@@ -8,23 +8,32 @@ agent:
         autobind: false
         interface: ligolo
 interface:
-    ligolo:
+    ligolosample:
         routes:
-            - 10.55.0.0/24
-    massivebyte:
-        routes:
-            - 10.56.0.0/24
+            - 10.254.0.0/24
+            - 10.255.0.0/24
 web:
+    behindreverseproxy: false
     corsallowedorigin:
-        - '*'
+        - https://webui.ligolo.ng
     debug: false
-    enabled: true
-    listen: :8080
-    secret: 1107608060e80ba4dfadd6a1fbc9fb3f4367fbf0b84f505bab0caf4e769db54e
+    enabled: false
+    enableui: true
+    listen: 127.0.0.1:8080
+    logfile: ui.log
+    secret: 3383861a48e1332583e5d8cd9946d24b98be780e0c64581d693cb4ff50a68a68
+    tls:
+        alloweddomains: []
+        autocert: false
+        certfile: ""
+        enabled: false
+        keyfile: ""
+        selfcert: false
+        selfcertdomain: ligolo
     trustedproxies:
         - 127.0.0.1
     users:
-        ligolo: $argon2id$v=19$m=32768,t=3,p=4$KQNyNWbYX2rsrl5rvTzR0g$VwRGBk4Gwzu3cmKBH4eqjv/zP4QieYB1IA7liu5HTO8
+        ligolo: $argon2id$v=19$m=32768,t=3,p=4$De5gVDnUWkQgsHe60gpCnA$S6UYLKSXlcCO8jr05zCW6BibdIYQFwdYxoAdRJPwAig
 ```
 
 ## Agent
@@ -72,26 +81,46 @@ interface:
 
 Ligolo-ng now has an experimental Web API, capable of controlling all cli interface functions via HTTP calls.
 
+!!! warning
+
+    WebUI is *disabled* by default, set `enabled: true` on the configuration file to enable it!
+
 ### Settings
 
 ```yaml
 web:
+    behindreverseproxy: false
     corsallowedorigin:
-        - '*'
+        - https://webui.ligolo.ng
     debug: false
-    enabled: true
-    listen: :8080
-    secret: 1107608060e80ba4dfadd6a1fbc9fb3f4367fbf0b84f505bab0caf4e769db54e
+    enabled: false
+    enableui: true
+    listen: 127.0.0.1:8080
+    logfile: ui.log
+    secret: 3383861a48e1332583e5d8cd9946d24b98be780e0c64581d693cb4ff50a68a68
+    tls:
+        alloweddomains: []
+        autocert: false
+        certfile: ""
+        enabled: false
+        keyfile: ""
+        selfcert: false
+        selfcertdomain: ligolo
     trustedproxies:
         - 127.0.0.1
     users:
-        ligolo: $argon2id$v=19$m=32768,t=3,p=4$KQNyNWbYX2rsrl5rvTzR0g$VwRGBk4Gwzu3cmKBH4eqjv/zP4QieYB1IA7liu5HTO8
+        ligolo: $argon2id$v=19$m=32768,t=3,p=4$De5gVDnUWkQgsHe60gpCnA$S6UYLKSXlcCO8jr05zCW6BibdIYQFwdYxoAdRJPwAig
 ```
 
+- behindreverseproxy: Set to `true` is running behind a reverse-proxy
 - corsallowedorigin: Set the list of origins that should be allowed to make cross-origin calls
 - debug: run the webserver with debug enabled, which is a lot noisier
 - enabled: enable or disable the API (default: false)
+- enableui: expose the ligolo-ng WebUI (default: true)
+- listen: specify the listening IP and port
+- logfile: specify where http logs should be stored
 - secret: the JWT secret, automatically generated on first start
+- tls: specify tls options, works like ligolo-ng proxy settings
 - trustedproxies: trustedproxies set a list of network origins (IPv4 addresses, IPv4 CIDRs, IPv6 addresses or IPv6 CIDRs) from which to trust request's headers that contain alternative client IP.
 - users: users allowed to connect to the web API
 

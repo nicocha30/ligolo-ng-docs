@@ -1,5 +1,7 @@
 site_name: Ligolo-ng Documentation
 site_url: https://docs.ligolo.ng
+repo_url: https://github.com/nicocha30/ligolo-ng
+repo_name: nicocha30/ligolo-ng
 theme:
   features:
     - navigation.tabs
@@ -9,15 +11,16 @@ theme:
     primary: black
   logo: assets/ligolo.svg
 nav:
-  - Introduction:
-      - index.md
   - Getting Started:
+      - Introduction: index.md
       - Installing and Building: InstallBuild.md
       - Quickstart: Quickstart.md
       - Configuration File: Config-File.md
       - Listeners : Listeners.md
       - Agent as server (Bind Connection) : Bind.md
       - Access to agent's local ports (127.0.0.1): Localhost.md
+      - Using the Web Interface: webui.md
+
   - Sample and Advanced Usage:
       - Basic Tunneling: sample/basic.md
       - Advanced Pivoting: sample/double.md
