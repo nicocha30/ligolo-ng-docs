@@ -5,6 +5,7 @@ repo_name: nicocha30/ligolo-ng
 theme:
   features:
     - navigation.tabs
+    - navigation.footer
   name: material
   palette:
     scheme: slate
